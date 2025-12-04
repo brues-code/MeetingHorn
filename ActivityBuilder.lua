@@ -199,7 +199,7 @@ function InstanceBuilder:base(name, path, minLevel, members, class)
         shortName = shortName,
         shortNameLower = shortNameLower,
         path = path,
-        members = members or 40,
+        members = members or 25,
         category = CATEGORY_DATA[path],
         minLevel = minLevel or 0,
         class = class,
@@ -214,7 +214,7 @@ function InstanceBuilder:base(name, path, minLevel, members, class)
 end
 
 function InstanceBuilder:raid(key, members)
-    members = members or self.projectId == 2 and 40 or 25
+    members = members or 25
     local minLevel = ns.PROJECT_DATA[self.projectId].maxLevel
     return self:base(names(key), 'Raid', minLevel, members)
 end
