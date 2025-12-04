@@ -220,7 +220,6 @@ function InstanceBuilder:raid(key, members)
 end
 
 function InstanceBuilder:raid2(key, difficultyId)
-    local difficultyName = GetDifficultyInfo(difficultyId):gsub('（', ''):gsub('）', '')
     local members = DIFFICULTY_GROUP_SIZE[difficultyId]
     local minLevel = ns.PROJECT_DATA[self.projectId].maxLevel
     return self:base(names(key, difficultyId), 'Raid', minLevel, members)
