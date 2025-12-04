@@ -59,23 +59,23 @@ P(11, 6):raid2(4987, 3) -- Ruby Sanctum
 P(11, 6):raid2(4987, 5) -- Ruby Sanctum
 
 ---- tbc
-P(5, 1):raid(3457, 10) -- 卡拉赞
-P(5, 1):raid(3923) -- 格鲁尔的巢穴
-P(5, 1):raid(3836) -- 玛瑟里顿的巢穴
-P(5, 2):raid(3607) -- 毒蛇神殿
-P(5, 2):raid(3845) -- 风暴要塞
-P(5, 2):raid(3606) -- 海加尔山
-P(5, 2):raid(3959) -- 黑暗神庙
-P(5, 3):raid(3805, 10) -- 祖阿曼
-P(5, 4):raid(4075) -- 太阳井
+P(5, 1):raid(3457, 10) -- Karazhan
+P(5, 1):raid(3923) -- Gruul's Lair
+P(5, 1):raid(3836) -- Magtheridon's Lair
+P(5, 2):raid(3607) -- Serpentshrine Cavern
+P(5, 2):raid(3845) -- Tempest Keep
+P(5, 2):raid(3606) -- Hyjal Summit
+P(5, 2):raid(3959) -- Black Temple
+P(5, 3):raid(3805, 10) -- Zul'Aman
+P(5, 4):raid(4075) -- Sunwell Plateau
 ---- classic
-P(2):raid(2717) -- 熔火之心
--- P(2):raid(2159) -- 奥妮克希亚的巢穴
-P(2):raid(2677) -- 黑翼之巢
-P(2):raid(3428) -- 安其拉神殿
--- P(2):raid(3456) -- 纳克萨玛斯
-P(2):raid(1977, 20) -- 祖尔格拉布
-P(2):raid(3429, 20) -- 安其拉废墟
+P(2):raid(2717) -- Molten Core
+-- P(2):raid(2159) -- Onyxia's Lair
+P(2):raid(2677) -- Blackwing Lair
+P(2):raid(3428) -- Temple of Ahn'Qiraj
+-- P(2):raid(3456) -- Naxxramas
+P(2):raid(1977, 20) -- Zul'Gurub
+P(2):raid(3429, 20) -- Ruins of Ahn'Qiraj
 -- 地下城
 ---- wlk
 ------ hero
