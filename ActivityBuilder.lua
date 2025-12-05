@@ -108,7 +108,7 @@ local InstanceBuilder = {projectId = nil, phase = nil}
 
 local locale = GetLocale()
 
-CHINESE_NAMES = {}
+local CHINESE_NAMES = {}
 
 local function GetDifficultyInfoWithT(id)
     local difficultyName = GetDifficultyInfo(id):gsub('（', ''):gsub('）', '')
