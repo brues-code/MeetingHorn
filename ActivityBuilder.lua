@@ -9,12 +9,12 @@ local ns = select(2, ...)
 local L = ns.L
 
 local CATEGORY_LIST = {}
- ACTIVITY_LIST = {}
+local ACTIVITY_LIST = {}
 local MODE_LIST = {}
 
 local CATEGORY_DATA = {}
 local OUR_CHANNELS = {}
- ACTIVITY_IDS = {}
+local ACTIVITY_IDS = {}
 local MODE_IDS = {}
 
 ns.ACTIVITY_MENU = {}
@@ -242,7 +242,7 @@ function InstanceBuilder:pvp(key, minLevel, members)
 end
 
 function InstanceBuilder:quest(key, minLevel)
-    return self:base(names(key), 'Quest', minLevel, 40)
+    return self:base(names(key), 'Quest', minLevel, 25)
 end
 
 function InstanceBuilder:boss(key, minLevel)

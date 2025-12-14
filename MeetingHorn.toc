@@ -1,9 +1,8 @@
 ## Interface: 38000
 ## Title: MeetingHorn
 ## Title-zhCN: 集结号
-## Version: 3.0.3
+## Version: 3.0.5
 ## SavedVariables: MEETINGHORN_DB
 ## SavedVariablesPerCharacter: MEETINGHORN_DB_CHARACTER_MEMBERS
 
-Localization\zhCN_Zones.lua
 Load.xml
