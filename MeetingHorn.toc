@@ -4,5 +4,6 @@
 ## Version: 3.0.5
 ## SavedVariables: MEETINGHORN_DB
 ## SavedVariablesPerCharacter: MEETINGHORN_DB_CHARACTER_MEMBERS
+## OptionalDeps: Ace3, LibStub
 
 Load.xml
