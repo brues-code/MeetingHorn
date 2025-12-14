@@ -1,3 +1,4 @@
+local addonName, ns = ...
 ---@class UI
 ---@field MainPanel MeetingHornUIMainPanel
 ---@field Browser MeetingHornUIBrowser
@@ -25,21 +26,20 @@
 ---@field QuestGroup QuestGroup
 ---@field QuestServies QuestServies
 ---@field ThreeDimensionsCode ThreeDimensionsCode
-local ns = select(2, ...)
 
-local L = LibStub('AceLocale-3.0'):GetLocale('MeetingHorn', true)
+local L = LibStub('AceLocale-3.0'):GetLocale(addonName, true)
 
 ---@class MeetingHorn: AceAddon-3.0, AceEvent-3.0, LibClass-2.0
 ---@field private MainPanel MeetingHornUIMainPanel
-local Addon = LibStub('AceAddon-3.0'):NewAddon('MeetingHorn', 'LibClass-2.0', 'AceEvent-3.0')
+local Addon = LibStub('AceAddon-3.0'):NewAddon(addonName, 'LibClass-2.0', 'AceEvent-3.0')
 ns.Addon = Addon
 
 ns.L = L
+ns.Locale = GetLocale()
 ns.UI = {}
 ns.GUI = LibStub('tdGUI-1.0')
 ns.Stats = LibStub('LibNeteaseStats-1.0'):New(...)
 
-local L = ns.L
 _G.BINDING_NAME_MEETINGHORN_TOGGLE = L['Toggle MeetingHorn']
 _G.BINDING_HEADER_MEETINGHORN = L.ADDON_NAME
 

@@ -106,14 +106,12 @@ local DIFFICULTY_GROUP_SIZE = { --
 ---@class InstanceBuilder
 local InstanceBuilder = {projectId = nil, phase = nil}
 
-local locale = GetLocale()
-
 local CHINESE_NAMES = {}
 
 local function GetDifficultyInfoWithT(id)
     if not id then return "" end
     local difficultyName = GetDifficultyInfo(id):gsub('（', ''):gsub('）', '')
-    if locale == "zhCN" then
+    if ns.Locale == "zhCN" then
         ns.Addon.db.global.chinese.difficulties[id] = difficultyName
     end
     return difficultyName
@@ -134,11 +132,11 @@ local function names(key, difficultyId)
         r[1] = format('%s（%s）', r[1], difficultyName)
     end
     local translatedDifficultyName = difficultyName
-    if locale ~= "zhCN" and ns.Addon.db.global.chinese.difficulties[difficultyId] then
+    if ns.Locale ~= "zhCN" and ns.Addon.db.global.chinese.difficulties[difficultyId] then
         translatedDifficultyName = ns.Addon.db.global.chinese.difficulties[difficultyId]
     end
     local localeKey = key..translatedDifficultyName
-    if locale == "zhCN" then
+    if ns.Locale == "zhCN" then
         ns.Addon.db.global.chinese.zones[localeKey] = r[1]
     elseif ns.Addon.db.global.chinese.zones[localeKey] then
         CHINESE_NAMES[ns.Addon.db.global.chinese.zones[localeKey]] = r[1]

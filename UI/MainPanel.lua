@@ -13,7 +13,7 @@ function MainPanel:Constructor()
 
     self:SetupTabs({
         {L['Search Activity'], self.Browser}, --
-        {L['Create Activity'], self.Manage}, --
+        {L['Create Activity'], self.Manage, ns.Locale ~= "zhCN"}, --
         --{L['Recent members'], self.Recent}, --
         {L['星团长'], self.GoodLeader}, --
         {L['实用工具'], self.PracticalTool}, --
@@ -158,19 +158,27 @@ function MainPanel:SetupTabs(tabs)
     end
 
     local tabIndex = 0
+    local lastVisibleTab
     for i, v in ipairs(tabs) do
         tabIndex = tabIndex + 1
         local tab = self.Tabs[i] or self:CreateTabButton(tabIndex)
         tab:SetText(v[1])
         tab.frame = v[2]
         tab:HookScript('OnClick', UpdateTabs)
-        tab:Show()
+        if lastVisibleTab then
+            tab:ClearAllPoints()
+            tab:SetPoint('LEFT', lastVisibleTab, 'RIGHT', -18, 0)
+        end
+        local isShown = v[3] ~= true
+        tab:SetShown(isShown)
+        if isShown then
+            lastVisibleTab = tab
+        end
     end
 end
 
 function MainPanel:CreateTabButton(id)
     local button = CreateFrame('Button', nil, self, 'MeetingHornTabButtonTemplate')
-    button:SetPoint('LEFT', self.Tabs[id - 1], 'RIGHT', -18, 0)
     button:SetID(id)
     return button
 end
