@@ -1,18 +1,7 @@
 local ns = select(2, ...)
 
-local factionGroup = UnitFactionGroup("player")
-local function GetUnitFactionGroupIcon()
-    if factionGroup == "Alliance" then
-        return '1390441'
-    end
-    return '1390442'
-end
-local function GetUnitFactionGroupName()
-    if factionGroup == "Alliance" then
-        return '部落'
-    end
-    return '联盟'
-end
+local factionGroup, localizedFactionName = UnitFactionGroup("player")
+local factionIcon = factionGroup == "Alliance" and '1390441' or '1390442'
 
 local function BuildSpellLink(id)
     local link = GetSpellLink(id)
@@ -1865,11 +1854,11 @@ local ENCOUNTER_BOSSES = {
         abilities = {
             desc = [[|TInterface\AddOns\MeetingHorn\Media\Introduce\Introduce637:1250:320:0:0:1:1:0:1:0:1|t]],
         },
-        name = GetUnitFactionGroupName() .. '的冠军',
+        name = localizedFactionName .. '的冠军',
         summary = {
             desc = [[|TInterface\AddOns\MeetingHorn\Media\Introduce\Introduce637:1250:320:0:0:1:1:0:1:0:1|t]],
         },
-        icon = GetUnitFactionGroupIcon(),
+        icon = factionIcon,
     },
     [641] = {
         bossId = 641,
