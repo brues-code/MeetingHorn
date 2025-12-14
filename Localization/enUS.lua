@@ -346,3 +346,16 @@ L["菜刀"] = "Melee Cleave"       -- literally "kitchen knife" = melee-heavy gr
 L["传送"] = "Teleport"          -- offering teleports/portals
 L["其它"] = "Other"             -- miscellaneous/other categories
 L["打开语音房间"] = "Open voice room"
+L['给团长评价些有趣的标签吧'] = "Give the raid leader some fun tags."
+L['恭喜完成BOSS击杀！'] = "Congratulations on completing the BOSS kill!"
+L['星团长'] = 'Star Raid Leader'
+L['实用工具'] = 'Practical Tools'
+L["扫码立即使用"] = "Scan the Code to Use Immediately"
+L["微信扫码"] = "Scan with WeChat"
+L["大神扫码"] = "Scan with DaShen"
+L["ICC物价"] = "ICC Market Prices"
+L["任务指引"] = "Quest Guide"
+L["副本攻略"] = "Dungeon Guide"
+L["角色周报"] = "Character Weekly Report"
+L["天赋装备"] = "Talents & Gear"
+L["掌上集结号"] = "Rally Call Mobile App"

@@ -15,8 +15,8 @@ function MainPanel:Constructor()
         {L['Search Activity'], self.Browser}, --
         {L['Create Activity'], self.Manage}, --
         --{L['Recent members'], self.Recent}, --
-        {'星团长', self.GoodLeader}, --
-        {'实用工具', self.PracticalTool}, --
+        {L['星团长'], self.GoodLeader}, --
+        {L['实用工具'], self.PracticalTool}, --
         --{L['Announcement'], self.Announcement}, --
         {L['MissionGuidance'], self.MissionGuidance}, --
         {L['Encounter'], self.Encounter}, --
