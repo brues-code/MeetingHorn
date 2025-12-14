@@ -1,5 +1,5 @@
 
-local L = LibStub('AceLocale-3.0'):NewLocale('MeetingHorn', 'enUS')
+local L = LibStub('AceLocale-3.0'):NewLocale('MeetingHorn', 'enUS', true)
 if not L then return end
 
 --@localization(locale=""enUS", format="lua_additive_table", table-name="L", same-key-is-true=true)@
@@ -306,7 +306,13 @@ the “Pocket Meeting Horn” activity list.
 Plan ahead with Pocket Meeting Horn — cross‑device grouping made easy!]]
 
 L['运势：'] = 'Fortune:'
-
+L['指挥：'] = 'Leadership:'
+L['公正：'] = 'Fairness:'
+L['作为团长的次数：|cff808080（暴雪通行证下所有角色）|r'] = 'Times as raid leader: |cff808080(all characters under Battle.net account)|r'
+L['视频攻略'] = 'Video Guide'
+L['团长ID：%s'] = 'Leader ID: %s'
+L['团长被评价数量较少，暂时无法查看。'] = 'This leader has too few reviews to display.'
+L['没有查询到该团长数据~'] = 'No data found for this leader.'
 
 L['申请星团长'] = 'Apply to Become a Star Raid Leader'
 L['直充专区'] = 'Direct Top-Up Zone'
