@@ -1082,7 +1082,7 @@ end
 
 function LFG:SQGLIB(eventName,maps)
     for LeaderName, data in pairs(maps) do
-        local regimentData = ns.Addon.db.realm.starRegiment.regimentData[LeaderName]
+        local regimentData = ns.Addon.db.realm.starRegiment.regimentData[LeaderName] or {}
         regimentData.medalMap = {acc_exp = data.ae, next_star_level_threshold = data.ne, medal =  data.m}
         regimentData.medalTime = time()
         ns.Addon.db.realm.starRegiment.regimentData[LeaderName] = regimentData
