@@ -6,23 +6,23 @@ local ns = select(2, ...)
 
 -- 创建闪烁提醒框架
 function ns.CreateFlashFrame()
-    self = CreateFrame("Frame", nil, UIParent)
-    self:SetSize(100, 30)  -- 默认大小，可以根据需要调整
-    self:SetPoint("CENTER")  -- 默认位置，可以根据需要调整
-    self:SetFrameStrata("TOOLTIP")
-    self:SetFrameLevel(999)
-    self:Hide()  -- 初始化时隐藏
+    local flashFrame = CreateFrame("Frame", nil, UIParent)
+    flashFrame:SetSize(100, 30)  -- 默认大小，可以根据需要调整
+    flashFrame:SetPoint("CENTER")  -- 默认位置，可以根据需要调整
+    flashFrame:SetFrameStrata("TOOLTIP")
+    flashFrame:SetFrameLevel(999)
+    flashFrame:Hide()  -- 初始化时隐藏
 
-    self.isShow = false
+    flashFrame.isShow = false
 
     -- 创建背景纹理
-    local texture = self:CreateTexture(nil, "BACKGROUND")
+    local texture = flashFrame:CreateTexture(nil, "BACKGROUND")
     texture:SetTexture("INTERFACE/CHATFRAME/ChatFrameTab-NewMessage")
     texture:SetAllPoints()
     texture:SetVertexColor(1, 0.89, 0.18)  -- 设置颜色
 
     -- 创建动画组
-    local animGroup = self:CreateAnimationGroup()
+    local animGroup = flashFrame:CreateAnimationGroup()
     animGroup:SetLooping("BOUNCE")
 
     -- 创建Alpha动画
@@ -32,21 +32,21 @@ function ns.CreateFlashFrame()
     alphaAnim:SetDuration(0.7)
 
     -- 添加OnShow和OnHide脚本
-    self:SetScript("OnShow", function(self)
+    flashFrame:SetScript("OnShow", function(self)
         animGroup:Play()
     end)
-    self:SetScript("OnHide", function(self)
+    flashFrame:SetScript("OnHide", function(self)
         animGroup:Stop()
     end)
 
     -- 添加OnShow和OnHide脚本
-    self:SetScript("OnShow", function(self)
+    flashFrame:SetScript("OnShow", function(self)
         animGroup:Play()
     end)
-    self:SetScript("OnHide", function(self)
+    flashFrame:SetScript("OnHide", function(self)
         animGroup:Stop()
     end)
-    return self
+    return flashFrame
 end
 
 
