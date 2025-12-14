@@ -34,9 +34,9 @@ function GradePanel:Constructor()
         tinsert(self.scores, obj)
     end
 
-    SetupScore(self.Score1, L['指挥：'], [[Interface\AddOns\MeetingHorn\Media\Spell_Holy_Stoicism]])
+    SetupScore(self.Score1, L['指挥：'], 135978) -- Vampire Touch
     SetupScore(self.Score2, L['公正：'], [[Interface\AddOns\MeetingHorn\Media\PVECurrency-Justice]])
-    SetupScore(self.Score3, L['运势：'], [[Interface\AddOns\MeetingHorn\Media\INV_Misc_Herb_GoldClover]])
+    SetupScore(self.Score3, L['运势：'], 134211) -- Goldclover
 
     self:SetScript('OnShow', self.OnShow)
     self:SetScript('OnHide', self.OnHide)
