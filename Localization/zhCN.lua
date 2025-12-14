@@ -1,5 +1,6 @@
+local addonName = ...
 ---@class MeetingHornLocale
-local L = LibStub('AceLocale-3.0'):NewLocale('MeetingHorn', 'zhCN')
+local L = LibStub('AceLocale-3.0'):NewLocale(addonName, 'zhCN')
 if not L then
     return
 end

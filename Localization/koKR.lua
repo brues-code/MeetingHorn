@@ -1,5 +1,5 @@
-
-local L = LibStub('AceLocale-3.0'):NewLocale('MeetingHorn', 'koKR')
+local addonName = ...
+local L = LibStub('AceLocale-3.0'):NewLocale(addonName, 'koKR')
 if not L then return end
 
 --@localization(locale=""koKR", format="lua_additive_table", table-name="L", same-key-is-true=true)@

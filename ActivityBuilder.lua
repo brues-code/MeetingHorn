@@ -111,6 +111,7 @@ local locale = GetLocale()
 local CHINESE_NAMES = {}
 
 local function GetDifficultyInfoWithT(id)
+    if not id then return "" end
     local difficultyName = GetDifficultyInfo(id):gsub('（', ''):gsub('）', '')
     if locale == "zhCN" then
         ns.Addon.db.global.chinese.difficulties[id] = difficultyName
@@ -128,12 +129,8 @@ local function names(key, difficultyId)
         r = {L[key], SHORT_NAMES[key]}
     end
 
-    local difficultyName = ""
-    if difficultyId then
-        difficultyName = GetDifficultyInfoWithT(difficultyId)
-        -- for i, v in ipairs(r) do
-        --     r[i] = format('%s（%s）', v, difficultyName)
-        -- end
+    local difficultyName = GetDifficultyInfoWithT(difficultyId)
+    if difficultyName and difficultyName ~= "" then
         r[1] = format('%s（%s）', r[1], difficultyName)
     end
     local translatedDifficultyName = difficultyName
