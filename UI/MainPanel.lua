@@ -157,21 +157,19 @@ function MainPanel:SetupTabs(tabs)
         self:UpdateTabFrames()
     end
 
-    local tabIndex = 0
     local lastVisibleTab
     for i, v in ipairs(tabs) do
-        tabIndex = tabIndex + 1
-        local tab = self.Tabs[i] or self:CreateTabButton(tabIndex)
-        tab:SetText(v[1])
-        tab.frame = v[2]
+        local tab = self.Tabs[i] or self:CreateTabButton(i)
+        local text, frame, isHidden = unpack(v)
+        tab:SetText(text)
+        tab.frame = frame
         tab:HookScript('OnClick', UpdateTabs)
         if lastVisibleTab then
             tab:ClearAllPoints()
             tab:SetPoint('LEFT', lastVisibleTab, 'RIGHT', -18, 0)
         end
-        local isShown = v[3] ~= true
-        tab:SetShown(isShown)
-        if isShown then
+        tab:SetShown(isHidden ~= true)
+        if isHidden ~= true then
             lastVisibleTab = tab
         end
     end
