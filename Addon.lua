@@ -31,7 +31,7 @@ local L = LibStub('AceLocale-3.0'):GetLocale(addonName, true)
 
 ---@class MeetingHorn: AceAddon-3.0, AceEvent-3.0, LibClass-2.0
 ---@field private MainPanel MeetingHornUIMainPanel
-local Addon = LibStub('AceAddon-3.0'):NewAddon(addonName, 'LibClass-2.0', 'AceEvent-3.0')
+local Addon = LibStub('AceAddon-3.0'):NewAddon(addonName, 'LibClass-2.0', 'AceEvent-3.0', 'AceConsole-3.0')
 ns.Addon = Addon
 
 ns.L = L
@@ -96,6 +96,9 @@ function Addon:OnInitialize()
     self:RegisterEvent('GROUP_JOINED', 'ZoneChanged')
     self:RegisterEvent('UNIT_PHASE', 'ZoneChanged')
     --@end-classic@]=]
+
+    self:RegisterChatCommand("mh", "Toggle")
+    self:RegisterChatCommand(addonName, "Toggle")
 
     self:SetupHyperlink()
     ns.BuildActivities()
